@@ -28,7 +28,10 @@ body {
   border-radius: 10px;
 }
 
-.my-3 {
+.mr-3 {
+  margin-right: 5px;
+}
+.mb-3 {
   margin-bottom: 40px;
 }
 
@@ -73,6 +76,34 @@ body {
   font-weight: 700;
   color: #575757;
 }
+
+.card-container .svg:nth-child(2) {
+  background-color: #00b5ff;
+}
+.svg {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px 0 0 100px;
+}
+.svg-1 {
+  background-color: #d21010;
+}
+.svg-2 {
+  background-color: #00b5ff;
+}
+.svg-3 {
+  background-color: #ffe700;
+}
+.svg-4 {
+  background-color: #a6ff00;
+}
+.svg-5 {
+  background-color: #73b100;
+}
+.svg-6 {
+  background-color: #3e5f00;
+}
 .card-headline span:nth-child(2) {
   background-color: #e8eef3;
   width: 25px;
@@ -102,4 +133,78 @@ body {
 .content-icon {
   width: 15px;
   height: 15px;
+}
+
+/* Styles for the popup */
+.modal-btn {
+  background-color: transparent;
+  border: 1px dotted #436601;
+  padding: 3px;
+}
+.modal-btn:hover {
+  cursor: pointer;
+  background-color: #a6ff00;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+.modal-body {
+  padding: 20px 0 0 0;
+}
+/* Style for the close button */
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #d21010;
+}
+
+/* Upload attachment button */
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid #a6ff00;
+  color: #008000;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: gray;
+  color: white;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
