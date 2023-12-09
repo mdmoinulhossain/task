@@ -15,6 +15,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($conn->query($sql) === TRUE) {
             echo "File uploaded successfully";
+            // Redirect after 1 second - behave like page reload
+            // sleep(1);
+            // header('Location: index.html');
+            // exit();
+            // redirect after 3 sec into frontpage
+            echo '<script>
+                    setTimeout(function() {
+                        window.location.href = "index.html";
+                    }, 3000);
+                 </script>';
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

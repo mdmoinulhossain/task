@@ -9,10 +9,22 @@
           <input type="file" name="file" />
           <label for="file">Add your attachment</label>
         </div>
-        <button type="submit">Upload</button>
+        <button type="submit" class="submit-btn">Submit</button>
       </form>
       <div>
-        <h5>List of Attachment</h5>
+        <h5 style="margin-bottom: 10px;">List of Attachment</h5>
+        <?php
+        include "./db-conn.php";
+        $fileList = "SELECT `id`, `filename` FROM `files` WHERE 1";
+        $displayQuery = mysqli_query($conn, $fileList);
+        $sequentialNumber = 1;
+        if (mysqli_num_rows($displayQuery) > 0) {
+          while ($row = mysqli_fetch_assoc($displayQuery)) {
+            $file = $row['filename'];
+            echo '<ul><li>' . $sequentialNumber . '. ' . $file . '</li></ul>';
+            $sequentialNumber++;
+          }
+        } ?>
       </div>
     </div>
   </div>
