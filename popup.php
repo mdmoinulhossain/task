@@ -3,11 +3,11 @@
   <div class="popup-content">
     <span class="close-button" onclick="closePopup()">&times;</span>
     <div class="modal-body">
-      <form method="post" enctype="multipart/form-data" action="./uploads.php" id="uploadForm">
+      <form class="input-file-form" method="post" enctype="multipart/form-data" action="./uploads.php" id="uploadForm">
         <div class="upload-btn-wrapper mb-3">
           <button class="btn">+</button>
-          <input type="file" name="file" />
-          <label for="file">Add your attachment</label>
+          <input type="file" name="file" id="fileInput" onchange="displayFileName()" />
+          <label for="file" id="fileInputLabel">Add your attachment</label>
         </div>
         <button type="submit" class="submit-btn">Submit</button>
       </form>
